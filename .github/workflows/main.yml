@@ -20,4 +20,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Execute
-        run: cypress run
+        run: cypress run --browser chrome
