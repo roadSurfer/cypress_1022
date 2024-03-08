@@ -11,7 +11,8 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     container:
-      image: cypress/browsers:node-20.11.0-chrome-121.0.6167.184-1-ff-123.0-edge-121.0.2277.128-1
+      #image: cypress/browsers:node-20.11.0-chrome-121.0.6167.184-1-ff-123.0-edge-121.0.2277.128-1
+      image: cypress/included:13.6.6
       options: --user 1001
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -19,4 +20,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Execute test script
-        run: ./test.sh -i
+        run: ./test.sh
